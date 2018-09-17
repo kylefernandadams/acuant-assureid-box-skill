@@ -12,6 +12,10 @@ git clone https://github.com/kylefernandadams/acuant-assureid-box-skill.git
 ```
 yarn global add serverless
 ```
+OR
+```
+npm intall -g serverless
+```
 4) Configure Serverless with your AWS IAM credentials
 ```
 serverless config credentials --provider aws --key YOURAPIKEY --secret YOURSECRET
