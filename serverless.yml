@@ -1,0 +1,30 @@
+# Serverless - Box Skills AWS Lambda deployment config
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Service and provider configuration
+service: government-id-skill
+provider:
+  name: aws
+  stage: dev
+  region: us-east-1
+  environment:
+     ASSURE_ID_ENDPOINT: https://services.assureid.net
+     ASSURE_ID_USERNAME: CHANGE_ME
+     ASSURE_ID_PASSWORD: CHANGE_ME
+     ASSURE_ID_SUBSCRIPTION_ID: CHANGE_ME
+# Environment Variables
+
+
+# Function Configuration
+functions:
+  index:
+    handler: index.handler
+    runtime: nodejs8.10
+    timeout: 60
+    events:
+      - http:
+          method: POST
+          path: government-id-skill
+          cors: true
