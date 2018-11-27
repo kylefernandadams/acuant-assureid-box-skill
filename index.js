@@ -4,7 +4,7 @@ const { AssureIdProvider } = require('./assure-id-provider');
 
 exports.handler = async (event) => {    
     // Get Box Skills variables
-    const filesReader = FilesReader(event.body);
+    const filesReader = FileReader(event.body);
     const skillsWriter = SkillsWriter(filesReader.getFileContext());
     const assureIdProvider = AssureIdProvider();
     // const { requestId, skillId, fileId, fileReadClient, fileWriteToken } = filesReader.getFileContext();
